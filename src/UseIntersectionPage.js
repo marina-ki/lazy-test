@@ -1,6 +1,5 @@
 import React, { useRef } from "react";
 import * as images from "./images";
-import Card from "./components/Card";
 import { useIntersection } from "use-intersection";
 
 const Component = ({ image }) => {
@@ -11,7 +10,7 @@ const Component = ({ image }) => {
   });
   return (
     <div ref={target}>
-      {intersecting ? <Card src={images[image]} /> : <div></div>}
+      {intersecting ? <img src={images[image]} width={500}/> : <div></div>}
     </div>
   );
 };
