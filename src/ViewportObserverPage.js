@@ -15,7 +15,7 @@ export const ViewportObserverPage = () => {
       {Object.keys(images).map((image, i) => (
         <ViewportObserver onEnter={onEnter}>
            {visible ? (
-          <img src={images[image]} key={i} width={500}/>
+          <img src={images[image]} key={i} width={500} alt="hoge"/>
         ) : (
           <div></div>
         )}
