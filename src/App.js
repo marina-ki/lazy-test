@@ -1,7 +1,6 @@
 import React from "react";
 import "./styles.css";
 import { ViewportObserverPage } from "./ViewportObserverPage";
-import { IntersectionObserverPage } from "./IntersectionObserverPage";
 import { UseIntersectionPage } from "./UseIntersectionPage";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
@@ -16,9 +15,6 @@ function App() {
             <Switch>
               <Route path="/viewport-observer">
                 <ViewportObserverPage />
-              </Route>
-              <Route path="/intersection-observer">
-                <IntersectionObserverPage />
               </Route>
               <Route path="/use-intersection">
                 <UseIntersectionPage />
