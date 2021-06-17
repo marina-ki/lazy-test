@@ -9,7 +9,7 @@ const Component = ({ image }) => {
     once: true,
   });
   return (
-    <div ref={target}>
+    <div ref={target} style={{ height:500}}>
       {intersecting ? <img src={images[image]} width={500} alt="hoge"/> : <div></div>}
     </div>
   );

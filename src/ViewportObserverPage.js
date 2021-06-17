@@ -1,25 +1,33 @@
 import * as images from "./images";
-import ViewportObserver from 'viewport-observer';
-import React, { useState } from 'react';
+import ViewportObserver from "viewport-observer";
+import React, { useState } from "react";
 
-export const ViewportObserverPage = () => {
+const Component = ({ image }) => {
   const [visible, setVisible] = useState(false);
 
   const onEnter = () => {
-    console.log('enter');
+    console.log("enter");
     setVisible(true);
   };
 
   return (
-    <>
-      {Object.keys(images).map((image, i) => (
-        <ViewportObserver onEnter={onEnter}>
-           {visible ? (
-          <img src={images[image]} key={i} width={500} alt="hoge"/>
+    <div style={{ height: 500 }}>
+      <ViewportObserver onEnter={onEnter}>
+        {visible ? (
+          <img src={images[image]} width={500} alt="hoge" />
         ) : (
           <div></div>
         )}
-        </ViewportObserver>
+      </ViewportObserver>
+    </div>
+  );
+};
+
+export const ViewportObserverPage = () => {
+  return (
+    <>
+      {Object.keys(images).map((image, i) => (
+        <Component image={image} key={i} />
       ))}
     </>
   );
