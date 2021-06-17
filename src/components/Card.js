@@ -1,6 +1,5 @@
 import React from "react";
 import faker from "faker";
-import LazyLoader from "./LazyLoader";
 import "./Card.css";
 
 export default function Card({ src }) {
@@ -17,7 +16,7 @@ export default function Card({ src }) {
         </p>
       </div>
       <div>
-        <LazyLoader src={src} threshold={[0, 0.5, 1]} />
+        <img src={src} threshold={[0, 0.5, 1]} />
       </div>
     </article>
   );
