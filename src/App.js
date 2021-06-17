@@ -1,14 +1,9 @@
 import React from "react";
 import "./styles.css";
-import {ViewportObserverPage} from "./ViewportObserverPage"
-import {IntersectionObserverPage}from "./IntersectionObserverPage"
-
-import {
-    BrowserRouter as Router,
-    Switch,
-    Route,
-    Link
-  } from "react-router-dom";
+import { ViewportObserverPage } from "./ViewportObserverPage";
+import { IntersectionObserverPage } from "./IntersectionObserverPage";
+import { UseIntersectionPage } from "./UseIntersectionPage";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 function App() {
   return (
@@ -18,17 +13,19 @@ function App() {
         <h3>Lazyloading</h3>
         <section className="wrapper">
           <Router>
-                  <Switch>
-          <Route path="/viewport-observer">
-            <ViewportObserverPage />
-          </Route>
-          <Route path="/intersection-observer">
-            <IntersectionObserverPage />
-          </Route>
-        </Switch>
-        </Router>
+            <Switch>
+              <Route path="/viewport-observer">
+                <ViewportObserverPage />
+              </Route>
+              <Route path="/intersection-observer">
+                <IntersectionObserverPage />
+              </Route>
+              <Route path="/use-intersection">
+                <UseIntersectionPage />
+              </Route>
+            </Switch>
+          </Router>
         </section>
-
       </header>
     </main>
   );
